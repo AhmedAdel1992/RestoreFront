@@ -3,6 +3,7 @@ import { TypedUseSelectorHook, useDispatch, useSelector } from "react-redux";
 import { basketSlice } from "../../features/basket/basketSlice";
 import { counterSlice } from "../../features/contact/counterSlice";
 import { catalogSlice } from "../../features/catalog/catalogSlice";
+import { accountSlice } from "../../features/account/accountSlice";
 
 //elly t7t da lw bn3ml store bel redux el 2dem msh bel redux toolkit
 // export function configureStore() {
@@ -14,6 +15,7 @@ export const store = configureStore({
     counter: counterSlice.reducer,
     basket: basketSlice.reducer,
     catalog: catalogSlice.reducer,
+    account: accountSlice.reducer,
   },
 });
 
