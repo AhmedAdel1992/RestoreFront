@@ -12,6 +12,7 @@ import CheckoutPage from "../../features/checkout/CheckoutPage";
 import Login from "../../features/account/Login";
 import Register from "../../features/account/Register";
 import RequireAuth from "./RequireAuth";
+import Orders from "../../features/orders/Orders";
 
 export const router = createBrowserRouter([
   {
@@ -20,7 +21,10 @@ export const router = createBrowserRouter([
     children: [
       {
         element: <RequireAuth />,
-        children: [{ path: "checkout", element: <CheckoutPage /> }],
+        children: [
+          { path: "checkout", element: <CheckoutPage /> },
+          { path: "orders", element: <Orders /> },
+        ],
       },
       //elly fo2 da elly howa RequireAuth ana 7atet gowah el 7agat elly mynf3sh el user yd5olha 8er lw howa logged in f lama hyd5ol msln
       //3ala el checkout page hyt3mlo redirect 3l RequireAuth el awal w lw 3ada el shart bta3 el login hykml 3l outlet bta3 el RequireAuth
